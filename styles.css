@@ -334,10 +334,11 @@ footer {
   }
   header h1:nth-child(2) {
     font-size: 1.3rem;
+    margin-bottom: 0.8rem;
   }
 
   .header-content {
-    max-width: 100%;
+    padding: 1rem;
   }
 
   /* About */
@@ -353,7 +354,7 @@ footer {
 
   .about_section p {
     width: unset;
-    padding: 3rem 2.5rem 0rem 2.5rem;
+    margin: 3rem 2rem 0rem 2rem;
   }
 
   /* skill */
@@ -372,24 +373,49 @@ footer {
   }
 
   /* project */
-  
-.project-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0rem 10rem;
-}
 
-.project-card {
-  width: calc(50% - 10px);
-  margin-bottom: 20px;
+  .project-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 2rem;
+  }
+
+  .project-card {
+    width: calc(100% - 10px);
+    margin-bottom: 30px;
+  }
+
+  /* contact */
+
+  /* .contact-section {
+  background-color: #4caf5f;
+  color: #fff;
+  padding: 80px 0;
   text-align: center;
-  text-decoration: none;
-  color: #333;
-}
+} */
 
-.project-card img {
-  width: 100%;
-  border-radius: 6px;
+  .contact-container {
+    max-width: unset;
+    margin: 0 auto;
+  }
 
+  .contact-container p {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .contact-form {
+    width: 20rem;
+    padding: 0 1rem;
+  }
+
+  .contact-form button {
+    font-size: 0.8rem;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
 }
