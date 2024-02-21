@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/iconify/3.1.1/iconify.min.js"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <h1>My Portifolio</h1>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger-menu">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <section class="header-content" id="home">
+        <h1>Anisiuba Mmesoma</h1>
+        <h1>Aspiring Software Engineer</h1>
+        <p>
+          Welcome to my portfolio site. Explore my skills, projects, and more.
+        </p>
+      </section>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about_section">
+        <img
+          src="https://images.pexels.com/photos/10486111/pexels-photo-10486111.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt=""
+        />
+        <p>
+          Hi there! I'm <b>Anisiuba Mmesoma</b>, a software engineering student
+          with a deep love for crafting digital solutions that make a
+          difference. I believe in the power of technology to transform lives
+          and solve real-world problems. With every line of code I write, I'm
+          fueled by a burning passion to create something meaningful and
+          impactful. I'm on a journey to learn, grow, and contribute my skills
+          to building a better, brighter future for us all.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="timeline">
+        <li>
+          <div class="dot"></div>
+          <div class="card">
+            <h3>HTML</h3>
+            <p>
+              A markup language used for creating web pages. Lorem ipsum dolor
+              sit amet, consectetur adipisicing elit. Ad, cupiditate!
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div class="card">
+            <h3>CSS</h3>
+            <p>
+              A styling language used for designing web pages. Proficient in CSS
+              libraries such as Bootstrap and Tailwind CSS.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div class="card">
+            <h3>JavaScript</h3>
+            <p>
+              A programming language used for adding interactivity to web pages.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div class="card">
+            <h3>React</h3>
+            <p>
+              A JavaScript library for building user interfaces. Lorem ipsum
+              dolor sit.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div class="card">
+            <h3>Flask</h3>
+            <p>
+              A lightweight and flexible microframework for building web
+              applications in Python
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div class="card">
+            <h3>Python</h3>
+            <p>
+              A versatile programming language used for various applications.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-container">
+        <a href="https://yienor.blog" class="project-card" target="_blank">
+          <img src="./Yienor's_Blog.png" alt="Project 1" />
+          <h3>Yienor's Blog</h3>
+        </a>
+        <a href="https://2nkpqm.csb.app/" class="project-card" target="_blank">
+          <img src="./Keeper.png" alt="Project 2" />
+          <h3>Keeper App</h3>
+        </a>
+        <a
+          href="https://github.com/yienor_blog"
+          class="project-card"
+          target="_blank"
+        >
+          <img src="./Yienor's_Admin.png" alt="Project 2" />
+          <h3>Yienor's Blog Admin</h3>
+        </a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>This is a placeholder text for contact information.</p>
+    </section>
+
+    <footer>
+      <ul class="social-icons">
+        <li>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="scripts.js"></script>
+
+    <script>
+      window.onscroll = function () {
+        highlightNavLink()
+      }
+
+      function highlightNavLink() {
+        var navLinks = document.querySelectorAll('.nav-links li a')
+
+        // Loop through each section
+        document.querySelectorAll('section').forEach((section) => {
+          var top = section.offsetTop
+          var height = section.offsetHeight
+
+          if (window.scrollY >= top && window.scrollY < top + height) {
+            navLinks.forEach((link) => {
+              link.style.borderBottom = 'none'
+            })
+
+            var targetLink = document.querySelector(
+              `.nav-links li a[href="#${section.id}"]`
+            )
+            if (targetLink) {
+              targetLink.style.borderBottom = '1px solid #333'
+            }
+          }
+        })
+      }
+    </script>
+  </body>
+</html>
