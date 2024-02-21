@@ -292,10 +292,14 @@ footer {
     border-bottom-right-radius: 10px;
     text-align: center;
     padding: 20px 0;
+    transition: opacity 0.3s, top 1s;
+    opacity: 0;
   }
 
   .nav-links.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
   }
 
   .nav-links li {
@@ -317,7 +321,7 @@ footer {
   }
 
   .line.open {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-4px, 6px);
   }
 
   .line.open:nth-child(2) {
@@ -325,7 +329,7 @@ footer {
   }
 
   .line.open:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-4px, -6px);
   }
 
   /* Header */
