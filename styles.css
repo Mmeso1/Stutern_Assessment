@@ -118,7 +118,9 @@ section h2 {
   border: 1px solid transparent;
   border-radius: 6px;
   width: 25rem;
+  max-height: 25rem;
   margin-right: 4rem;
+  object-fit: cover;
 }
 
 .about_section p {
@@ -139,13 +141,13 @@ section h2 {
   margin: 1rem 4rem;
 }
 
-.dot {
+.timeline .dot {
   position: absolute;
   left: 10px;
   top: 10px;
   width: 20px;
   height: 20px;
-  background-color: #333;
+  background-color: #4caf5f;
   border-radius: 50%;
   margin-right: 20px;
 }
@@ -161,6 +163,7 @@ section h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0rem 10rem;
 }
 
 .project-card {
@@ -178,6 +181,72 @@ section h2 {
 
 .project-card h3 {
   margin-top: 10px;
+}
+
+.contact-section {
+  background-color: #4caf5f;
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-container h2 {
+  margin-bottom: 30px;
+}
+
+.contact-container p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  width: 28rem;
+  display: inline-block;
+  justify-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #333;
+  outline: none;
+}
+
+.contact-form button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #4caf5f;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e0e0e0;
+}
+
+.contact-info {
+  margin-top: 50px;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
 }
 
 /* Footer styles */
